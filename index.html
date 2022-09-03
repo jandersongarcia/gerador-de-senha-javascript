@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senha Online</title>
+    <link rel="stylesheet" href="/lib/bootstrap-5.2.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/lib/fontawesome-free-6.2.0-web/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="w-100 vh-100 bg-dark d-flex justify-content-center align-items-center">
+        <div id="block" class="bg-light border rounded p-3">
+            <h1 class="text-danger border-bottom text-uppercase">Gerador de Senhas</h1>
+            <h2>Gere senhas aleatórias de qualquer tamanho.</h2>
+            <div>
+                <div class="py-3">
+                    <div class="input-group-text mb-2">
+                        <input class="form-check-input mt-0" type="checkbox" id="upper" checked>
+                        <label class="ms-2" for="upper">Letras Maiúsculas</label>
+                    </div>
+                    <div class="input-group-text mb-2">
+                        <input class="form-check-input mt-0" type="checkbox" id="lower" checked>
+                        <label class="ms-2" for="lower">Letras Minúsculas</label>
+                    </div>
+                    <div class="input-group-text mb-2">
+                        <input class="form-check-input mt-0" type="checkbox" id="numbers">
+                        <label class="ms-2" for="numbers">Números</label>
+                    </div>
+                    <div class="input-group-text mb-2">
+                        <input class="form-check-input mt-0" type="checkbox" id="specials">
+                        <label class="ms-2" for="specials">Caracteres Especiais</label>
+                    </div>
+                    <div class="input-group">
+                        <label for="number" class="form-label">Número de Caracteres <span class="text-danger fw-bold"
+                                id="label">8</span></label>
+                        <input type="range" class="form-range" id="counter" min="4" max="100" value="8">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="text" id="visor" class="form-control" readonly>
+                        <button class="btn btn-outline-secondary" onclick="copyText()" type="button" id="button-addon2">
+                            <i class="fa-solid fa-copy"></i>
+                        </button>
+                    </div>
+                    <div class="input-group">
+                        <button class="btn btn-danger w-100" onclick="geraSenha()"><i class="fa-solid fa-arrows-rotate"></i> Gerar Senha</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ALERT -->
+    <div id="alert" class="alert alert-success d-none" role="alert">
+        
+    </div>
+    <script src="/lib/bootstrap-5.2.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
